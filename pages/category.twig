@@ -1,0 +1,50 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<div class="container-fluid category-section">
+  <div class="row page-category">
+    <div class="col-xs-12 section-horizontal">
+      <div class="row header">
+        <div class="col-xs-12 category__description">
+          <div class="outer">
+            <div class="inner">
+              <h2 class="category-title">{{ category.title | capitalize }}</h2>
+              {% if category.children | length > 0 %}
+              <ol class="breadcrumb">
+              {% for sub_category in category.children %}
+                <li><a href="{{ sub_category.permalink }}">{{ sub_category.title }}</a></li>
+              {% endfor %}
+              </ol>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row products__row">
+    {% if products.count == 0 %}
+      {% include '_products-placeholder.twig' %}
+    {% else %}
+    {% for products_row in products | batch(3) %}
+    <div class="row">
+      {% for product in products_row %}
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 product__item">
+        <a href="/product.php" class="product__container image-container {{ settings.thumbnail_form }}" style="background-image: url('{{ product.image_url }}')">
+          <img class="fake" src="{{ product.image_url }}">
+          <div class="product__description">
+            {% if product.compared_price > 0 and product.compared_price is not null  %}
+            <h3 class="product__discount">Precio normal: <span class="product__price">{{ product.compared_price | money('symbol', 'code') }}</span></h3>
+            {% endif %}
+            <h2 class="title product__title">{{ product.name | capitalize }} <span class="product__price">{{ product.price | money('symbol', 'code') }}</span></h2>
+          </div>
+        </a>
+      </div> <!-- .product -->
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% include '_pagination.twig' %}
+    {% endif %}
+  </div> <!-- .products -->
+</div> <!-- .container-fluid -->
+{% endblock %}

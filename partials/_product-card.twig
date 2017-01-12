@@ -1,0 +1,20 @@
+{% if product.image_url is not null %}
+  {% set image_url = product.image_url %}
+  {% set style = '' %}
+{% else %}
+  {% set image_url = 'placeholders/product-11.jpg' | global_img_url %}
+  {% set style = 'img-placeholder' %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 product__item">
+  <a href="/productos/{{ product.permalink }}" class="product__container image-container {{ settings.thumbnail_form }} {{ style }}" style="background-image: url({{ image_url }})">
+    <img class="fake" src="{{ image_url }}">
+    <div class="product__description">
+      {% if product.compared_price > 0 and product.compared_price is not null  %}
+      <h3 class="product__discount">Precio normal: <span class="product__price">{{ product.price | money('symbol', 'code') }}</span></h3>
+      {% else %}
+      <br><br>
+      {% endif %}
+      <h2 class="title product__title">{{ product.name }} <span class="product__price">{{ product.compared_price | money('symbol', 'code') }}</span></h2>
+    </div>
+  </a>
+</div>
