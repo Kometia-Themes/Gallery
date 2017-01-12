@@ -1,0 +1,52 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<div class="container-fluid blog-section">
+  <div class="row header">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 page__description">
+      <div class="outer">
+        <div class="inner">
+          <h1 class="page-title">{{ blog.title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row content">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      {% for posts_row in posts | batch(2) %}
+        <div class="row">
+        {% for post in posts_row %}
+          {% if post.image_url is not empty and post.image_url is defined %}
+            {% set image_url = post.image_url %}
+            {% set style = '' %}
+          {% else %}
+            {% set image_url = 'placeholders/product-11.jpg' | global_img_url %}
+            {% set style = 'img-placeholder' %}
+          {% endif %}
+        <div class="col-xs-12 col-md-6 post">
+          <div class="post__item">
+            <div class="post__item-image {{ settings.thumbnail_form }}">
+              <a class="image-link {{ style }}" href="/blogs/{{ blog.permalink }}/posts/{{ post.permalink }}" style="background-image: url({{ image_url }});">
+                {% if post.image_url is not null %}
+                <img class="fake" src="{{ image_url }}">
+                {% endif %}
+              </a>
+            </div>
+            <div class="post__item-description">
+              <h2 class="post__item-title"><a class="title-link" href="/blogs/{{ blog.permalink }}/posts/{{ post.permalink }}">{{ post.title }}</a></h2>
+              <p class="post__item-extract">{{ (post.summary is not empty ? post.summary : post.content) | truncate_words(30) }}</p>
+            </div>
+          </div> <!-- .post__item -->
+        </div> <!-- .post -->
+      {% endfor %}
+       </div> <!-- .row -->
+    {% endfor %}
+    </div> <!-- .col-xs-12.col-md-10.col-md-offset-1 -->
+    {% include '_pagination.twig' %}
+  </div> <!-- .content -->
+</div> <!-- .container-fluid -->
+
+{% endblock %}
+
+

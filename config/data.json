@@ -1,0 +1,100 @@
+{
+  "current": "Base",
+  "presets": {
+    "Base": {
+      "brand_main_color": "#d2691e",
+      "body_background_color": "#efe7e4",
+      "sidebar_menu_background_color": "#ffffff",
+      "sidebar_menu_links_color": "#696969",
+      "sidebar_menu_links_color_hover": "#d2691e",
+      "headings_color": "#000000",
+      "body_font_color": "#696969",
+      "main_link_color": "#d2691e",
+      "main_link_color_hover": "sienna",
+      "btn_text_color": "white",
+      "btn_text_color_hover": "white",
+      "btn_bg_color": "#d2691e",
+      "btn_bg_color_hover": "sienna",
+      "placeholder_background_color": "#efe7e4",
+      "product_card_background_color": "rgba(255,255,255,0)",
+      "product_compared_price_color": "#FF0000",
+
+      "base_font": "Google+Source+Sans+Pro",
+      "body_font_size": "16px",
+      "body_font_weight": "300",
+      "heading_font": "Google+Lustria",
+      "heading_font_size": "36px",
+      "second_font": "Google+Raleway",
+      
+      "use_logo": false,
+      "nav_logo": "",
+      "use_favicon": false,
+      "favicon.png": "",
+      "frontpage_section_1": "featured-products",
+      "frontpage_section_2": "featured-collections",
+
+      "enable_share_products": true,
+      "enable_share_blog": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "share_google": true,
+
+
+      "featured_products_collection": "inicio",
+      "featured_products_limit": "",
+      "cart_title": "Carrito de compras",
+      "cart_description": "En caso de cualquier alguna, aquí estaremos para ti.",
+      "cart_btn_buy_text": "Proceder a comprar",
+      "cart_btn_more_text": "Comprar más",
+
+      "home_collections_title": "Colecciones destacadas",
+      "home_collections_description": "Estas son nuestras selecciones más importantes.",
+
+      "featured_collection_1": "inicio",
+      "featured_collection_2": "",
+      "featured_collection_3": "",
+      "featured_collection_4": "",
+      "featured_collection_5": "",
+      "featured_collection_6": "",
+      "titles_bg_color": "#e8d7d7",
+      "collection_bg_color": "#e8d7d7",
+      "collection_bg_color_even": "#f7e2d8",
+      "collection_bg_color_odd": "#e8d7d7",
+      "show_vendor_name": true,
+      "thumbnail_form": "thumbnail_portrait",
+
+      "contact_page_info": true,
+      "map_is_enabled": true,
+      "map_address": "Mexico City",
+      "map_zoom": "14",
+      "map_marker": true,
+      "map_api_key": "AIzaSyBjWefNJdkFjr8IC6izNHSj-9hJzCwIAr0",
+      "footer_display_social": true,
+      "facebook_link": "https://www.facebook.com/ShopertiHQ",
+      "twitter_link": "",
+      "google_link": "",
+      "instagram_link": "",
+      "pinterest_link": "",
+      "youtube_link": "",
+      "vimeo_link": "",
+      "tumblr_link": "",
+      "whatsapp_link": "",
+      "policy_url": "",
+      "footer_display_payment_methods": true,
+      "accept_visa": true,
+      "accept_mastercard": true,
+      "accept_amex": true,
+      "accept_paypal": true,
+      "accept_oxxo": true,
+      "accept_spei": false,
+      "accept_cash": false,
+      "footer_display_contact_data": true,
+      "footer_contact_data": "Calle Principal #000\n+52 1 000 000 0000"
+    }
+  }
+}
+
+
+
+

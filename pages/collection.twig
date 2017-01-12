@@ -1,0 +1,45 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<div class="container-fluid collection-section">
+  {% if collection.image_url is not null %}
+    {% set image_url = collection.image_url %}
+    {% set style = '' %}
+  {% else %}
+    {% set image_url = 'placeholders/product-11.jpg' | global_img_url %}
+    {% set style = 'img-placeholder' %}
+  {% endif %}
+
+  <div class="row page-collection">
+    <div class="col-xs-12 section-horizontal">
+      <div class="row collection">
+        <div class="col-xs-12 col-md-6 collection__description">
+          <div class="outer">
+            <div class="inner">
+              <h2 class="collection-title">{{ collection.title }}</h2>
+              <p class="collection-text">{{ collection.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 img-background {{ style }}" style="background-image: url({{ image_url }});">
+          <img src="{{ image_url }}" alt="{{ collection.title }}">
+        </div>
+      </div>
+    </div>
+  </div>
+{% for products_row in products | batch(6) %}
+  <div class="row products__row">
+    {% for product in products_row %}
+      {% include '_product-card.twig' %}
+    {% endfor %}
+  </div> <!-- .products__row -->
+{% endfor %}
+  {% include '_pagination.twig' %}
+</div> <!-- .container-fluid -->
+{% endblock %}
+
+
+
+
+

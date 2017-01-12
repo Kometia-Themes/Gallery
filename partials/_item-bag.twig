@@ -1,0 +1,70 @@
+<div class="col-xs-12">
+  {% if settings.show_vendor_name and product.vendor_name is not empty %}
+    <p class="vendor">Marca: <strong>{{ product.vendor_name }}</strong></p>
+  {% endif %}
+  <h1 class="product-single__name">{{ product.name }}</h1>
+  {% if not product.is_in_stock %}<span class="label label-danger">Agotado</span>{% endif %}
+</div>
+<div class="col-xs-12">
+  <div class="product-single__price" id="js-price-preview">
+    {% if product.compared_price > 0 and product.compared_price is not null  %}
+    <del class="compared-price"><span class="inner">{{ product.compared_price is defined ? product.compared_price | money('symbol', 'code') : '' }}</span></del><br>
+    {% endif %}
+    <span class="product-price-data-price">{{ product.price | money('symbol', 'code') }}</span>
+  </div>
+</div>
+
+ <div class="product-price-data">
+  <form class="product_selection" action="/carrito/agregar" method="post">
+  <input type="hidden" name="sku_id" value="{{ product.sku.id }}" id="js-sku-id">
+  {% for modifier, options in product.skus_modifiers %}
+    <div class="col-xs-12">
+      <div class="product__vars">
+        <h5 class="product__heading">{{ modifier }}</h5>
+        <select class="selectpicker js-variant-select" title="Elegir {{ modifier }}" name="{{ loop.index0 }}" id="{{ loop.index0 }}">
+          {% for option in options %}
+          <option value="{{ option }}" {% if loop.first %}selected="selected"{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  {% endfor %}
+    <div class="col-xs-12">
+      <div class="product__vars">
+        <h5 class="product__heading">Cantidad</h5>
+        <select class="selectpicker" title="Cantidad de producto" name="quantity" id="quantity">
+          {% for qty in 1..5 %}
+          <option value="{{ qty }}" {{ qty == item.quantity ? ' selected="selected"' : 'null' }}>{{ qty }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="product__btn">
+      {% if product.is_in_stock %}
+        <button type="submit" class="btn btn-block" id="js-add-to-cart">
+          <i class="mdi mdi-cart"></i> Añadir al carrito
+        </button>
+        {% else %}
+        <button class="btn btn-block js-add-to-cart-disabled" disabled="disabled"> No disponible
+        </button>
+      {% endif %}
+      </div>
+    </div>
+    {% if product.description is not empty %}
+    <div class="col-xs-12">
+      <hr class="product__spacer">
+        <div class="product__description">
+          <p class="product__description">{{ product.description | truncate_words(30) }}</p>
+        </div>
+    </div>
+  {% endif %}
+  </form>
+{% if settings.enable_share_products %}
+  <div class="col-xs-12">
+    <hr class="product__spacer">
+      <div class="product__share">
+        {% include '_social-share.twig' %}
+      </div>
+  </div>
+{% endif %}

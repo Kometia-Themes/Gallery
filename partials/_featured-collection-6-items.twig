@@ -1,0 +1,83 @@
+{% if collection_1.image_url is not null %}
+  {% set image = collection_1.image_url %}
+{% else %}
+  {% set image = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container right" style="background-image: url({{ image }});">
+  <img src="{{ image }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_1.title }}</h2>
+    <p class="collection-text">{{ collection_1.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_1.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_2.image_url is not null %}
+  {% set image2 = collection_2.image_url %}
+{% else %}
+  {% set image2 = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container left" style="background-image: url({{ image2 }});">
+  <img src="{{ image2 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_2.title }}</h2>
+    <p class="collection-text">{{ collection_2.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_2.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_3.image_url is not null %}
+  {% set image3 = collection_3.image_url %}
+{% else %}
+  {% set image3 = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container right" style="background-image: url({{ image3 }});">
+  <img src="{{ image3 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_3.title }}</h2>
+    <p class="collection-text">{{ collection_3.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_3.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_4.image_url is not null %}
+  {% set image4 = collection_4.image_url %}
+{% else %}
+  {% set image4 = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container left" style="background-image: url({{ image4 }});">
+  <img src="{{ image4 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_4.title }}</h2>
+    <p class="collection-text">{{ collection_4.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_4.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_5.image_url is not null %}
+  {% set image5 = collection_5.image_url %}
+{% else %}
+  {% set image5 = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container right" style="background-image: url({{ image5 }});">
+  <img src="{{ image5 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_5.title }}</h2>
+    <p class="collection-text">{{ collection_5.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_5.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_6.image_url is not null %}
+  {% set image6 = collection_6.image_url %}
+{% else %}
+  {% set image6 = null %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container left" style="background-image: url({{ image6 }});">
+  <img src="{{ image6 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_6.title }}</h2>
+    <p class="collection-text">{{ collection_6.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_6.permalink }}">Ver colección</a></p>
+  </div>
+</div>
