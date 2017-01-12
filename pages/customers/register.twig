@@ -1,0 +1,62 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<div class="container-fluid customer">
+
+  <div class="row header">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 page__description">
+      <div class="outer">
+        <div class="inner">
+          <h1 class="page-title">Crea una cuenta</h1>
+          <p>¿Eres un nuevo cliente? Empieza Aquí</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row content">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+    {% form 'customer_register' 'role="form" class="login-form"' %}
+      <div class="row row__inputs">
+        <div class="col-x-12">
+          <div class="form-group">
+            <div class="input-group input-group-lg login-form__input">
+              <input type="text" class="form-control input-lg" id="first_name" name="first_name" placeholder="Nombre" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-x-12">
+          <div class="form-group">
+            <div class="input-group input-group-lg login-form__input">
+              <input type="text" class="form-control input-lg" id="last_name" name="last_name" placeholder="Apellido" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-x-12">
+          <div class="form-group">
+            <div class="input-group input-group-lg login-form__input">
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-x-12">
+          <div class="form-group">
+            <div class="input-group input-group-lg login-form__input">
+              <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Contraseña" required>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-x-12">
+        <div class="form-group">
+          <input class="btn btn-primary login-form__button" type="submit" name="submit" id="submit" value="&nbsp; Crear cuenta &nbsp;">
+        </div>
+      </div>
+    </div>
+    {% endform %}
+
+    </div>
+  </div> <!-- .content -->
+</div> <!-- .container-fluid -->
+{% endblock %}

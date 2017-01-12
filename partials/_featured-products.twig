@@ -1,0 +1,48 @@
+{% if (settings.featured_products_limit > 0 or settings.featured_products_limit is empty) and settings.featured_products_collection is not empty and featured_products is not empty %}
+
+  {% if settings.featured_products_collection is not empty and collections[settings.featured_products_collection] is defined %}
+    {% set featured_products = collections[settings.featured_products_collection].products %}
+  {% endif %}
+
+  {% if settings.featured_products_collection is not empty and featured_products | length > 0 %}
+    {% set limit = settings.featured_products_limit is not empty ? min(0+settings.featured_products_limit, 50) : 50 %}
+    {% for product in featured_products | slice(0, limit) %}
+      {% if product.image_url is not null %}
+        {% set image_url = product.image_url %}
+      {% else %}
+        {% set image_url = 'placeholders/product-11.jpg' | global_img_url %}
+      {% endif %}
+      <div class="container-fluid home-section">
+        <div class="row main-product">
+          <div class="main-product__description">
+            <h3 class="main-product__subtitle">{{ settings.featured_products_collection | title }}</h3>
+            <h2 class="title main-product__title"><a class="title-link" href="/productos/{{ product.permalink }}">{{ product.name }}</a></h2>
+            <p class="main-product__price">{{ product.price | money('symbol', 'code') }}</p>
+            <p class="main-product__view-more"><a class="view-more-link" href="/productos/{{ product.permalink }}">Ver producto</a></p>
+          </div>
+          <div class="col-xs-12 section-vertical">
+            <div class="main-product__content image-container" style="background-image: url('{{ image_url }}')">
+              <img class="fake" src="{{ image_url }}">
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  {% set image_url = 'placeholders/product-11.jpg' | global_img_url %}
+  <div class="container-fluid home-section">
+    <div class="row main-product">
+      <div class="main-product__description">
+        <h3 class="main-product__subtitle">¡Falta poco!</h3>
+        <p>Esta sección mostrará tus productos destacados. Para definirlos dirígete al área de configuración del tema y asigna la colección que los contiene.</p>
+        <a class="btn btn-primary" href="/admin/collections" class="btn btn-placeholder">Gestionar colecciones</a>
+        <a class="btn btn-primary" href="/admin/themes" class="btn btn-placeholder">Ir a sección de temas</a>
+      </div>
+      <div class="col-xs-12 section-vertical">
+        <div class="main-product__content image-container img-placeholder" style="background-image: url('{{ image_url }}')">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

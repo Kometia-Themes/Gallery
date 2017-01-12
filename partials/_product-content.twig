@@ -1,0 +1,47 @@
+<div class="container-fluid product-section">
+  <div class="row products__row carousel product-single">
+    <div class="col-xs-12 main-product">
+    <button class="btn btn-lg goBack hidden-xs hidden-sm"><i class="mdi mdi-arrow-left"></i>Regresar</button>
+     <div class="slider slider-product js-slider">
+      {% if product.images | length > 0 %}
+        {% for thumbnail in product.images %}
+        <div class="slider__slide">
+          <div class="slide-content">
+            <div class="slide-image-container" style="background-image: url({{ thumbnail.url }});">
+              <img class="slide-image fake" src="{{ thumbnail.url }}">
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="slider__slide">
+          <div class="slide-content">
+            <div class="slide-image-container" style="background-image: url('{{ 'placeholders/product-11.jpg' | global_img_url }}');">
+              <img class="slide-image fake" src="{{ 'placeholders/product-11.jpg' | global_img_url }}">
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+    <div class="col-xs-12 carousel-nav hidden-xs">
+     <div class="slider-nav">
+      {% if product.images | length > 1 %}
+        {% for thumbnail in product.images %}
+        <div class="slider-nav__thumbnail">
+          <a class="slider-nav__link thumbnail_square" href="#" style="background-image: url({{ thumbnail.url }});">
+            <img class="fake" src="{{ thumbnail.url }}">
+          </a>
+        </div>
+        {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+    <div class="col-xs-12 sidebar-product">
+      <div class="row shopping-bag">
+      {% include '_item-bag.twig'%}
+      </div>
+    </div>
+
+  </div> <!-- .products -->
+</div> <!-- .container-fluid -->

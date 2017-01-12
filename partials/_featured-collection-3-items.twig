@@ -1,0 +1,47 @@
+{% if collection_1.image_url is not null %}
+  {% set image = collection_1.image_url %}
+  {% set style = '' %}
+{% else %}
+  {% set image = 'placeholders/product-11.jpg' | global_img_url %}
+  {% set style = 'img-placeholder' %}
+{% endif %}
+<div class="col-xs-12 section-vertical container {{ style }}" style="background-image: url({{ image }});">
+  <img src="{{ image }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_1.title }}</h2>
+    <p class="collection-text">{{ collection_1.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_1.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_2.image_url is not null %}
+  {% set image2 = collection_2.image_url %}
+  {% set style = '' %}
+{% else %}
+  {% set image2 = 'placeholders/product-11.jpg' | global_img_url %}
+  {% set style = 'img-placeholder' %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container right {{ style }}" style="background-image: url({{ image2 }});">
+  <img src="{{ image2 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_2.title }}</h2>
+    <p class="collection-text">{{ collection_2.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_2.permalink }}">Ver colección</a></p>
+  </div>
+</div>
+
+{% if collection_3.image_url is not null %}
+  {% set image3 = collection_3.image_url %}
+  {% set style = '' %}
+{% else %}
+  {% set image3 = 'placeholders/product-11.jpg' | global_img_url %}
+  {% set style = 'img-placeholder' %}
+{% endif %}
+<div class="col-xs-12 col-sm-6 section-vertical container left {{ style }}" style="background-image: url({{ image3 }});">
+  <img src="{{ image3 }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_3.title }}</h2>
+    <p class="collection-text">{{ collection_3.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_3.permalink }}">Ver colección</a></p>
+  </div>
+</div>

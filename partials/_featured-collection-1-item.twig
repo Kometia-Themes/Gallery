@@ -1,0 +1,16 @@
+{% if collection_1.image_url is not null %}
+  {% set image = collection_1.image_url %}
+  {% set style = '' %}
+{% else %}
+  {% set image = 'placeholders/product-11.jpg' | global_img_url %}
+  {% set style = 'img-placeholder' %}
+{% endif %}
+
+<div class="col-xs-12 section-vertical container {{ style }}" style="background-image: url({{ image }});">
+  <img src="{{ image }}">
+  <div class="collection__description">
+    <h2 class="collection-title">{{ collection_1.title }}</h2>
+    <p class="collection-text">{{ collection_1.description }}</p>
+    <p><a class="collection-link" href="/colecciones/{{ collection_1.permalink }}">Ver colección</a></p>
+  </div>
+</div>

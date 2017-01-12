@@ -1,1 +1,1 @@
-# Gallery
+# Shoperti Gallery Theme
