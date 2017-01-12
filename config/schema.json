@@ -18,14 +18,14 @@
               "type": "color",
               "id": "brand_main_color",
               "label": "Color destacado",
-              "default": "chocolate",
-              "info": "Usualmente es el color principal de marca."
+              "default": "#43547e",
+              "info": "Usualmente es el color principal de la marca."
             },
             {
               "type": "color",
               "id": "body_background_color",
               "label": "Fondo",
-              "default": "#efe7e4"
+              "default": "#e4eaef"
             }
           ]
         },
@@ -36,19 +36,19 @@
               "type": "color",
               "id": "sidebar_menu_background_color",
               "label": "Fondo",
-              "default": "#efe7e4"
+              "default": "#ffffff"
             },
             {
               "type": "color",
               "id": "sidebar_menu_links_color",
               "label": "Vínculos y Textos",
-              "default": "dimgray"
+              "default": "#727272"
             },
             {
               "type": "color",
               "id": "sidebar_menu_links_color_hover",
               "label": "Sobre vínculos",
-              "default": "sienna"
+              "default": "#417f94"
             }
           ]
         },
@@ -59,25 +59,25 @@
               "type": "color",
               "id": "headings_color",
               "label": "Títulos",
-              "default": "dimgray"
+              "default": "#000000"
             },
             {
               "type": "color",
               "id": "body_font_color",
               "label": "Contenidos",
-              "default": "dimgray"
+              "default": "#515151"
             },
             {
               "type": "color",
               "id": "main_link_color",
               "label": "Vínculos",
-              "default": "chocolate"
+              "default": "#43547e"
             },
             {
               "type": "color",
               "id": "main_link_color_hover",
               "label": "Sobre vínculos",
-              "default": "sienna"
+              "default": "#417f94"
             }
           ]
         },
@@ -88,25 +88,25 @@
               "type": "color",
               "id": "btn_text_color",
               "label": "Texto",
-              "default": "white"
+              "default": "#ffffff"
             },
             {
               "type": "color",
               "id": "btn_bg_color",
               "label": "Color de fondo",
-              "default": "chocolate"
+              "default": "#43547e"
             },
             {
               "type": "color",
               "id": "btn_text_color_hover",
               "label": "Color texto con mouse encima",
-              "default": "white"
+              "default": "#ffffff"
             },
             {
               "type": "color",
               "id": "btn_bg_color_hover",
-              "label": "Color texto con mouse encima",
-              "default": "sienna"
+              "label": "Color de fondo con mouse encima",
+              "default": "#417f94"
             }
           ]
         },
@@ -117,25 +117,25 @@
               "type": "color",
               "id": "titles_bg_color",
               "label": "Fondo títulos",
-              "default": "#e8d7d7"
+              "default": "#43547e"
             },
             {
               "type": "color",
               "id": "collection_bg_color",
               "label": "Fondo colección",
-              "default": "#f2dad0"
+              "default": "#c3cce3"
             },
             {
               "type": "color",
               "id": "collection_bg_color_odd",
               "label": "Fondo colecciones impar",
-              "default": "#e8d7d7"
+              "default": "#c3cce3"
             },
             {
               "type": "color",
               "id": "collection_bg_color_even",
               "label": "Fondo colecciones par",
-              "default": "#f7e2d8"
+              "default": "#c3d9e3"
             },
             {
               "type": "color",
@@ -735,7 +735,8 @@
             {
               "type": "checkbox",
               "id": "footer_display_contact_data",
-              "label": "Mostrar datos"
+              "label": "Mostrar datos",
+              "default": true
             },
             {
               "type": "text",
@@ -872,12 +873,6 @@
           "header": "Productos Destacados",
           "settings": [
             {
-              "type": "checkbox",
-              "id": "enable_share_products",
-              "label": "Compartir en redes sociales",
-              "default": true
-            },
-            {
               "type": "collection",
               "id": "featured_products_collection",
               "label": "Productos destacados",
@@ -948,44 +943,6 @@
       ]
     },
     {
-      "name": "Blog",
-      "icon": "blog-page",
-      "sections": [
-        {
-          "settings": [
-            {
-              "type": "checkbox",
-              "id": "featured_blog_thumbnails_enabled",
-              "label": "Mostrar la imagen destacada",
-              "default": true
-            },
-            {
-              "type": "checkbox",
-              "id": "show_newsletter",
-              "label": "Mostrar registro al newsletter",
-              "default": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Colección",
-      "icon": "collection-page",
-      "sections": [
-        {
-          "settings": [
-            {
-              "type": "checkbox",
-              "id": "show_collections_sidebar",
-              "label": "Mostrar las barra de colecciones",
-              "default": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Producto",
       "icon": "product-page",
       "sections": [
@@ -1037,7 +994,7 @@
               "type": "text",
               "id": "map_address",
               "label": "Ubicación a mostrar",
-              "default": "London",
+              "default": "Mexico City",
               "info": "Ingresa la dirección que mas corresponda a tu ubicación"
             },
             {
@@ -1165,32 +1122,38 @@
             {
               "type": "checkbox",
               "id": "enable_share_products",
-              "label": "Habilitar compartir productos"
+              "label": "Habilitar compartir productos",
+              "default": true
             },
             {
               "type": "checkbox",
               "id": "enable_share_blog",
-              "label": "Habilitar compartir blog y posts"
+              "label": "Habilitar compartir blog y posts",
+              "default": true
             },
             {
               "type": "checkbox",
               "id": "share_facebook",
-              "label": "Compartir en Facebook"
+              "label": "Compartir en Facebook",
+              "default": true
             },
             {
               "type": "checkbox",
               "id": "share_twitter",
-              "label": "Tuitear en Twitter"
+              "label": "Tuitear en Twitter",
+              "default": true
             },
             {
               "type": "checkbox",
               "id": "share_pinterest",
-              "label": "Hacer pin en Pinterest"
+              "label": "Hacer pin en Pinterest",
+              "default": true
             },
             {
               "type": "checkbox",
               "id": "share_google",
-              "label": "+1 en Google Plus"
+              "label": "+1 en Google Plus",
+              "default": true
             }
           ]
         }
