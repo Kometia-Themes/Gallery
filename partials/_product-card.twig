@@ -10,11 +10,12 @@
     <img class="fake" src="{{ image_url }}">
     <div class="product__description">
       {% if product.compared_price > 0 and product.compared_price is not null  %}
-      <h3 class="product__discount">Precio normal: <span class="product__price">{{ product.price | money('symbol', 'code') }}</span></h3>
+      <h3 class="product__discount">Precio normal: <span class="product__price">{{ product.compared_price | money('symbol', 'code') }}</span></h3>
       {% else %}
       <br><br>
       {% endif %}
-      <h2 class="title product__title">{{ product.name }} <span class="product__price">{{ product.compared_price | money('symbol', 'code') }}</span></h2>
+      <h2 class="title product__title">{{ product.name }} <span class="product__price">{{ product.price | money('symbol', 'code') }}</span></h2>
     </div>
   </a>
 </div>
+

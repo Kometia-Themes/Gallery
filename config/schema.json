@@ -111,13 +111,31 @@
           ]
         },
         {
-          "header": "Productos y colecciones",
+          "header": "Productos, categorías y colecciones",
           "settings": [
             {
               "type": "color",
-              "id": "placeholder_background_color",
-              "label": "Fondo colecciones",
-              "default": "#efe7e4"
+              "id": "titles_bg_color",
+              "label": "Fondo títulos",
+              "default": "#e8d7d7"
+            },
+            {
+              "type": "color",
+              "id": "collection_bg_color",
+              "label": "Fondo colección",
+              "default": "#f2dad0"
+            },
+            {
+              "type": "color",
+              "id": "collection_bg_color_odd",
+              "label": "Fondo colecciones impar",
+              "default": "#e8d7d7"
+            },
+            {
+              "type": "color",
+              "id": "collection_bg_color_even",
+              "label": "Fondo colecciones par",
+              "default": "#f7e2d8"
             },
             {
               "type": "color",
@@ -504,11 +522,11 @@
           ]
         },
         {
-          "header": "Botones",
+          "header": "Secundaria",
           "settings": [
             {
               "type": "select",
-              "id": "btn_font",
+              "id": "second_font",
               "label": "Tipografía",
               "default": "Google+Raleway",
               "options": [
@@ -924,39 +942,6 @@
               "type": "collection",
               "id": "featured_collection_6",
               "label": "Colección de productos 6"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Página de Inicio - Blog",
-      "icon": "home-page",
-      "sections": [
-        {
-          "settings": [
-            {
-              "type": "blog",
-              "id": "featured_blog",
-              "label": "Seleccionar blog"
-            },
-            {
-              "type": "text",
-              "id": "featured_blog_title",
-              "label": "Título de sección"
-            },
-            {
-              "type": "checkbox",
-              "id": "featured_blog_home_thumbnails_enabled",
-              "label": "Mostrar la imagen destacada",
-              "default": true,
-              "info": "Si no existe se mostrará una imagen genérica"
-            },
-            {
-              "type": "text",
-              "id": "featured_blog_limit",
-              "label": "Cantidad de posts a mostrar",
-              "default": "3"
             }
           ]
         }

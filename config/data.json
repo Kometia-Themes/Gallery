@@ -24,7 +24,7 @@
       "body_font_weight": "300",
       "heading_font": "Google+Lustria",
       "heading_font_size": "36px",
-      "btn_font": "Google+Raleway",
+      "second_font": "Google+Raleway",
       
       "use_logo": false,
       "nav_logo": "",
@@ -49,8 +49,10 @@
       "featured_collection_4": "",
       "featured_collection_5": "",
       "featured_collection_6": "",
-      "collection_bg_color_even": "#f2dad0",
-      "collection_bg_color_odd": "#faeae4",
+      "titles_bg_color": "#e8d7d7",
+      "collection_bg_color": "#e8d7d7",
+      "collection_bg_color_even": "#f7e2d8",
+      "collection_bg_color_odd": "#e8d7d7",
       "show_vendor_name": true,
       "thumbnail_form": "thumbnail_portrait",
 
