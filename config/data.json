@@ -34,11 +34,19 @@
       "frontpage_section_2": "featured-collections",
 
       "enable_share_products": true,
+      "enable_share_blog": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "share_google": true,
+
+
       "featured_products_collection": "inicio",
       "featured_products_limit": "",
-
-
-
+      "cart_title": "Carrito de compras",
+      "cart_description": "En caso de cualquier alguna, aquí estaremos para ti.",
+      "cart_btn_buy_text": "Proceder a comprar",
+      "cart_btn_more_text": "Comprar más",
 
       "home_collections_title": "Colecciones destacadas",
       "home_collections_description": "Estas son nuestras selecciones más importantes.",

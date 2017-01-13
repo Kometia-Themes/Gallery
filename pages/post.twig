@@ -29,7 +29,7 @@
         <p class="post-sumary">{{ post.summary | truncate_words(30) }}</p>
         <p class="post-date">{{ post.published_at | datetime }}</p>
         {% if settings.enable_share_blog %}
-          {% include '_share_post.twig' %}
+          {% include '_social-share.twig' %}
         {% endif %}
       </div>
       {% if post.image_url is not empty and post.image_url is defined %}
