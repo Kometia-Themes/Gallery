@@ -20,7 +20,7 @@
       "collection_bg_color_even": "#c3cce3",
       "collection_bg_color_odd": "#c3d9e3",
       "product_card_background_color": "rgba(255,255,255,0)",
-      "product_compared_price_color": "#FF0000",
+      "product_compared_price_color": "#f44336",
       "base_font": "Google+Source+Sans+Pro",
       "body_font_size": "16px",
       "body_font_weight": "300",
