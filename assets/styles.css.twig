@@ -25,7 +25,11 @@ a, button { transition: all .3s ease 0s; }
 a:active, a:focus { outline: none;}
 :focus { outline: none !important;}
 ::-moz-focus-inner { border: 0 !important;}
-
+::selection {
+    background: {{ settings.brand_main_color }};
+    color: white;
+    text-shadow: none;
+}
 .btn {
     font-family: {{ settings.second_font | remove('Google+') | replace({'+': ' '}) }}, sans-serif !important;
     text-transform: uppercase;

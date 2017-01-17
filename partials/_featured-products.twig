@@ -1,9 +1,8 @@
-{% if (settings.featured_products_limit > 0 or settings.featured_products_limit is empty) and settings.featured_products_collection is not empty %}
+{% if settings.featured_products_collection is not empty and collections[settings.featured_products_collection] is defined %}
+  {% set featured_products = collections[settings.featured_products_collection].products %}
+{% endif %}
 
-  {% if settings.featured_products_collection is not empty and collections[settings.featured_products_collection] is defined %}
-    {% set featured_products = collections[settings.featured_products_collection].products %}
-  {% endif %}
-
+{% if (settings.featured_products_limit > 0 or settings.featured_products_limit is empty) and featured_products is not empty %}
   {% if settings.featured_products_collection is not empty and featured_products | length > 0 %}
     {% set limit = settings.featured_products_limit is not empty ? min(0+settings.featured_products_limit, 50) : 50 %}
     {% for product in featured_products | slice(0, limit) %}
