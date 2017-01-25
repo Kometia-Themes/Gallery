@@ -149,15 +149,16 @@ a:active, a:focus { outline: none;}
 .gotop:hover .mdi {color: rgba( 255,255,255,1);}
 .goBack {
   position: absolute; left: 12px; top: 12px; z-index: 99;
-  background-color: {{ settings.brand_main_color }};
-  border-color: {{ settings.brand_main_color }};
-  color: white;
+  background-color: {{ settings.btn_bg_color }};
+  border-color: {{ settings.btn_bg_color }};
+  color: {{ settings.btn_text_color }};
 }
 .goBack:hover, .goBack:focus {
-  background-color: sienna;
-  border-color: sienna;
-  color: white;
+  background-color: {{ settings.btn_bg_color_hover }};
+  border-color: {{ settings.btn_bg_color_hover }};
+  color: {{ settings.btn_text_color_hover }};
 }
+
 .thumbnail_square {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -802,7 +803,7 @@ strong {color: {{ settings.main_link_color }};}
   position: absolute;
   z-index: 99;
   padding: 2em;
-  background-color: {{ settings.body_background_color }};
+  background-color: {{ settings.body_background_color | darken_color }};
   bottom: 10px;
   left: 0;
   right: 0;
