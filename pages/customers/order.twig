@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="container-fluid customer">
-
+  <button class="btn btn-lg goBack hidden-xs hidden-sm"><i class="mdi mdi-arrow-left"></i>Regresar</button>
   <div class="row header">
     <div class="col-xs-12 page__description">
       <div class="outer">
@@ -19,25 +19,37 @@
       <div class="row">
         <div class="col-md-6">
           <h4 class="title">Dirección de envío</h4>
-          <p>{{ order.shipping_first_name ~ ' ' ~ order.shipping_last_name }} {{ order.shipping_full_name }}<br />
-          {{ order.shipping_address1 }}<br />
-          {{ order.shipping_address2 }}<br />
-          {{ order.shipping_company }}<br />
-          {{ order.shipping_country }}<br />
-          {{ order.shipping_state }}<br />
-          {{ order.shipping_postcode }}<br />
-          {{ order.shipping_phone }}</p>
+          <h5>{{ order.shipping.name }}</h5>
+          <p>
+            {{ order.shipping.address.address1 }}<br>
+            {{ order.shipping.address.address2 }}<br>
+            {% if order.shipping.address.company != '' %}
+              {{ order.shipping.address.company }}<br>
+            {% endif %}
+            {{ order.shipping.address.country }}<br>
+            {% if order.shipping.address.state != '' %}
+              {{ order.shipping.address.state }}<br>
+            {% endif %}
+            {{ order.shipping.address.postcode }}<br>
+            {{ order.shipping.phone }}
+          </p>
         </div>
         <div class="col-md-6">
           <h4 class="title">Dirección de pago</h4>
-          <p>{{ order.billing_first_name ~ ' ' ~ order.billing_last_name }} {{ order.billing_full_name }}<br />
-          {{ order.billing_address1 }}<br />
-          {{ order.billing_address2 }}<br />
-          {{ order.billing_company }}<br />
-          {{ order.billing_country }}<br />
-          {{ order.billing_state }}<br />
-          {{ order.billing_postcode }}<br />
-          {{ order.billing_phone }}</p>
+          <h5>{{ order.billing.name }}</h5>
+          <p>
+            {{ order.billing.address.address1 }}<br>
+            {{ order.billing.address.address2 }}<br>
+            {% if order.billing.address.company != '' %}
+              {{ order.billing.address.company }}<br>
+            {% endif %}
+            {{ order.billing.address.country }}<br>
+            {% if order.billing.address.state != '' %}
+              {{ order.billing.address.state }}<br>
+            {% endif %}
+            {{ order.billing.address.postcode }}<br>
+            {{ order.billing.phone }}
+          </p>
         </div>
       </div>
       <div class="row">
