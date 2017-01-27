@@ -335,6 +335,37 @@ h6 > a:focus {
 h1 { font-size: {{ settings.heading_font_size }}; }
 strong {color: {{ settings.main_link_color }};}
 
+/* * * * * * * * */
+/* Notifications */
+/* * * * * * * + */
+.notification {
+  position: absolute;
+  opacity: 0;
+  z-index: 999;
+  right: 2em;
+  top: -5em;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.notification.animated {
+  opacity: 1;
+  right: 2em;
+  top: 1em;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.notification.alert {padding: 10px 15px;}
+.notification.alert .message {color: #ffffff; padding-right: 20px; }
+.notification.alert button.close {color: #ffffff; margin-top: 3px;}
+.notification.alert-danger {background-color: #fc727a; border-color: #fc727a;}
+.notification.alert-success {background-color: #74DF00; border-color: #74DF00;}
+.notification.alert-warning {background-color: #FACC2E; border-color: #FACC2E;}
+
 /* * * * * * */
 /* Grid Page */
 /* * * * * * */

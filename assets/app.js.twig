@@ -2,6 +2,10 @@ var timeOut;
 $("p:contains('<meta charset=\"utf-8\" \/>')").remove();
 
 $(document).ready(function() {
+  setTimeout( function(){ 
+    $('.notification').addClass('animated');
+  }  , 300 );
+
   $('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
