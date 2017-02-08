@@ -23,7 +23,7 @@
         <h5 class="product__heading">{{ modifier }}</h5>
         <select class="selectpicker js-variant-select" title="Elegir {{ modifier }}" name="{{ loop.index0 }}" id="{{ loop.index0 }}">
           {% for option in options %}
-          <option value="{{ option }}" {% if loop.first %}selected="selected"{% endif %}>{{ option }}</option>
+          <option value="{{ option }}" {% if loop.first %}selected="selected"{% endif %}>{{ option | upper }}</option>
           {% endfor %}
         </select>
       </div>
