@@ -57,21 +57,7 @@
           </thead>
           <tbody>
             {% for order in customer.orders %}
-            <tr class="{% if order.cancelled %}cancelled_order{% endif %}">
-              <td><a href="/cuenta/orden/{{ order.id }}">{{ order.number }}</a></td>
-              <td>{{ order.created_at | datetime }}</td>
-              <td>{{ order.financial_status_label }}</td>
-              <td>{{ order.fulfillment_status_label }}</td>
-              <td>{{ order.total_price | money }}</td>
-            </tr>
-            <tr class="placed_order">
-              <td><a href="/cuenta/orden/{{ order.id }}">{{ order.number }}</a></td>
-              <td>{{ order.created_at | datetime }}</td>
-              <td>{{ order.financial_status_label }}</td>
-              <td>{{ order.fulfillment_status_label }}</td>
-              <td>{{ order.total_price | money }}</td>
-            </tr>
-            <tr class="placed_order">
+            <tr class="pointer js-clickable {% if order.cancelled %}cancelled_order{% else %}placed_order{% endif %}" data-href="/cuenta/orden/{{ order.id }}">
               <td><a href="/cuenta/orden/{{ order.id }}">{{ order.number }}</a></td>
               <td>{{ order.created_at | datetime }}</td>
               <td>{{ order.financial_status_label }}</td>
@@ -86,9 +72,8 @@
         No has realizado pedidos aún.
       {% endif %}
     </div>
-
     {% include '_pagination.twig' %}
-
   </div> <!-- .content -->
 </div> <!-- .container-fluid -->
 {% endblock %}
+

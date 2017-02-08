@@ -25,7 +25,13 @@
   </div>
   {% if products.count == 0 %}
   <div class="row products__row">
-    {% include '_products-placeholder.twig' %}
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-12 placeholder text-center">
+          <p class="lead products-text">Todavía no existen productos en esta categoría, una vez que empieces a crearlos aparecerán aquí.</p>
+        </div>
+      </div>
+    </div>
   </div>
   {% else %}
   <div class="row products__row">
