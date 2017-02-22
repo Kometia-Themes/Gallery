@@ -324,10 +324,28 @@
               ]
             },
             {
-              "type": "text",
+              "type": "select",
               "id": "body_font_size",
               "label": "Tamaño",
-              "default": "16px"
+              "default": "16px",
+              "options": [
+                {
+                  "value": "12px",
+                  "label": "12px"
+                },
+                {
+                  "value": "14px",
+                  "label": "14px"
+                },
+                {
+                  "value": "16px",
+                  "label": "16px"
+                },
+                {
+                  "value": "18px",
+                  "label": "18px"
+                }
+              ]
             },
             {
               "type": "select",
@@ -514,10 +532,32 @@
               ]
             },
             {
-              "type": "text",
+              "type": "select",
               "id": "heading_font_size",
-              "label": "Tamaño de Títulos",
-              "default": "36px"
+              "label": "Tamaño",
+              "default": "36px",
+              "options": [
+                {
+                  "value": "30px",
+                  "label": "30px"
+                },
+                {
+                  "value": "32px",
+                  "label": "32px"
+                },
+                {
+                  "value": "36px",
+                  "label": "36px"
+                },
+                {
+                  "value": "38px",
+                  "label": "38px"
+                },
+                {
+                  "value": "40px",
+                  "label": "40px"
+                }
+              ]
             }
           ]
         },
