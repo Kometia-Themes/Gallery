@@ -7,7 +7,7 @@
 </div>
 <div class="col-xs-12">
   <div class="product-single__price" id="js-price-preview">
-    {% if product.compared_price > 0 and product.compared_price is not null  %}
+    {% if product.compared_price > product.price %}
     <del class="compared-price"><span class="inner">{{ product.compared_price is defined ? product.compared_price | money('symbol', 'code') : '' }}</span></del><br>
     {% endif %}
     <span class="product-price-data-price">{{ product.price | money('symbol', 'code') }}</span>
