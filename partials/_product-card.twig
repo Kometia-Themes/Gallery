@@ -9,7 +9,7 @@
   <a href="/productos/{{ product.permalink }}" class="product__container image-container {{ settings.thumbnail_form }} {{ style }}" style="background-image: url({{ image_url }})">
     <img class="fake" src="{{ image_url }}">
     <div class="product__description">
-      {% if product.compared_price > 0 and product.compared_price is not null  %}
+      {% if product.compared_price > product.price %}
       <h3 class="product__discount">Precio normal: <span class="product__price">{{ product.compared_price | money('symbol', 'code') }}</span></h3>
       {% else %}
       <br><br>
