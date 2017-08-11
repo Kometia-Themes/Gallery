@@ -37,7 +37,7 @@
           {% for product in results.products %}
           <tr class="js-clickable" data-href="/productos/{{ product.permalink }}{% if product.sku.permalink != 'default' %}/{{ product.sku.permalink }}{% endif %}">
             <td width="20%" class="hidden-xs">
-              <a href="/productos/{{ product.permalink }}">
+              <a href="/productos/{{ product.permalink }}{% if product.sku.permalink != 'default' %}/{{ product.sku.permalink }}{% endif %}">
                 {% if product.image_url %}
                 <img src="{{ product.image_url }}&w=128&h=128" class="img img-responsive center-block pull-left" alt="{{ product.name | escape  }}">
                 {% else %}
@@ -46,7 +46,7 @@
               </a>
             </td>
             <td>
-              <a href="/productos/{{ product.permalink }}">
+              <a href="/productos/{{ product.permalink }}{% if product.sku.permalink != 'default' %}/{{ product.sku.permalink }}{% endif %}">
                 {{ product.name }}
               </a>
             </td>
