@@ -44,7 +44,7 @@
                 {% endif %}
               </td>
               <td>
-                <a class="cart__resume-table__product-name" href="/productos/{{ item.product.permalink }}">
+                <a class="cart__resume-table__product-name" href="/productos/{{ item.product.permalink }}{% if item.sku.permalink != 'default' %}/{{ item.sku.permalink }}{% endif %}">
                 {{ item.product.name }}{% if item.product.modifiers.count > 0 %} - {{ item.sku.name }}{% endif %}
                 </a>
                 <p class="cart__resume-table__product-excert">{{ item.product.excerpt | raw }}</p>
