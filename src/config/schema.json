@@ -162,7 +162,7 @@
           "settings": [
             {
               "type": "select",
-              "id": "base_font",
+              "id": "body_font",
               "label": "Tipografía",
               "default": "Google+Source+Sans+Pro:300",
               "options": [
@@ -351,15 +351,99 @@
               "type": "select",
               "id": "body_font_weight",
               "label": "Peso",
-              "default": "300",
+              "default": "400",
               "options": [
                 {
+                  "value": "100",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "100i",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "200",
+                  "label": "Extra light 200"
+                },
+                {
+                  "value": "200i",
+                  "label": "Extra Light Italic 200"
+                },
+                {
                   "value": "300",
-                  "label": "Light"
+                  "label": "Light 300"
+                },
+                {
+                  "value": "300i",
+                  "label": "Light 300i"
                 },
                 {
                   "value": "400",
-                  "label": "Normal"
+                  "label": "Regular 400"
+                },
+                {
+                  "value": "400i",
+                  "label": "Regular 400i"
+                },
+                {
+                  "value": "500",
+                  "label": "Medium 500"
+                },
+                {
+                  "value": "500i",
+                  "label": "Medium 500i"
+                },
+                {
+                  "value": "600",
+                  "label": "Semi Bold 600"
+                },
+                {
+                  "value": "600i",
+                  "label": "Semi Bold 600i"
+                },
+                {
+                  "value": "700",
+                  "label": "Bold 700"
+                },
+                {
+                  "value": "700i",
+                  "label": "Bold 700i"
+                },
+                {
+                  "value": "800",
+                  "label": "Extra Bold 800"
+                },
+                {
+                  "value": "800i",
+                  "label": "Extra Bold italic 800i"
+                },
+                {
+                  "value": "900",
+                  "label": "Black 900"
+                },
+                {
+                  "value": "900i",
+                  "label": "Black italic 900i"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "body_font_type",
+              "label": "Tipo",
+              "default": "sans-serif",
+              "options": [
+                {
+                  "value": "sans-serif",
+                  "label": "Sans serif"
+                },
+                {
+                  "value": "serif",
+                  "label": "Serif"
+                },
+                {
+                  "value": "cursive",
+                  "label": "Cursive"
                 }
               ]
             }
@@ -382,6 +466,11 @@
                 {
                   "value": "Google+Asap",
                   "label": "Asap",
+                  "group": "Google Web Fonts"
+                },
+                {
+                  "value": "Google+Barlow+Semi+Condensed",
+                  "label": "Barlow Semi Condensed",
                   "group": "Google Web Fonts"
                 },
                 {
@@ -558,6 +647,106 @@
                   "label": "40px"
                 }
               ]
+            },
+            {
+              "type": "select",
+              "id": "heading_font_weight",
+              "label": "Peso",
+              "default": "400",
+              "options": [
+                {
+                  "value": "100",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "100i",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "200",
+                  "label": "Extra light 200"
+                },
+                {
+                  "value": "200i",
+                  "label": "Extra Light Italic 200"
+                },
+                {
+                  "value": "300",
+                  "label": "Light 300"
+                },
+                {
+                  "value": "300i",
+                  "label": "Light 300i"
+                },
+                {
+                  "value": "400",
+                  "label": "Regular 400"
+                },
+                {
+                  "value": "400i",
+                  "label": "Regular 400i"
+                },
+                {
+                  "value": "500",
+                  "label": "Medium 500"
+                },
+                {
+                  "value": "500i",
+                  "label": "Medium 500i"
+                },
+                {
+                  "value": "600",
+                  "label": "Semi Bold 600"
+                },
+                {
+                  "value": "600i",
+                  "label": "Semi Bold 600i"
+                },
+                {
+                  "value": "700",
+                  "label": "Bold 700"
+                },
+                {
+                  "value": "700i",
+                  "label": "Bold 700i"
+                },
+                {
+                  "value": "800",
+                  "label": "Extra Bold 800"
+                },
+                {
+                  "value": "800i",
+                  "label": "Extra Bold italic 800i"
+                },
+                {
+                  "value": "900",
+                  "label": "Black 900"
+                },
+                {
+                  "value": "900i",
+                  "label": "Black italic 900i"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "heading_font_type",
+              "label": "Tipo",
+              "default": "sans-serif",
+              "options": [
+                {
+                  "value": "sans-serif",
+                  "label": "Sans serif"
+                },
+                {
+                  "value": "serif",
+                  "label": "Serif"
+                },
+                {
+                  "value": "cursive",
+                  "label": "Cursive"
+                }
+              ]
             }
           ]
         },
@@ -724,6 +913,106 @@
                   "value": "Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
                   "label": "Monaco/Lucida Console",
                   "group": "Monospace"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "second_font_weight",
+              "label": "Peso",
+              "default": "400",
+              "options": [
+                {
+                  "value": "100",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "100i",
+                  "label": "Thin 100"
+                },
+                {
+                  "value": "200",
+                  "label": "Extra light 200"
+                },
+                {
+                  "value": "200i",
+                  "label": "Extra Light Italic 200"
+                },
+                {
+                  "value": "300",
+                  "label": "Light 300"
+                },
+                {
+                  "value": "300i",
+                  "label": "Light 300i"
+                },
+                {
+                  "value": "400",
+                  "label": "Regular 400"
+                },
+                {
+                  "value": "400i",
+                  "label": "Regular 400i"
+                },
+                {
+                  "value": "500",
+                  "label": "Medium 500"
+                },
+                {
+                  "value": "500i",
+                  "label": "Medium 500i"
+                },
+                {
+                  "value": "600",
+                  "label": "Semi Bold 600"
+                },
+                {
+                  "value": "600i",
+                  "label": "Semi Bold 600i"
+                },
+                {
+                  "value": "700",
+                  "label": "Bold 700"
+                },
+                {
+                  "value": "700i",
+                  "label": "Bold 700i"
+                },
+                {
+                  "value": "800",
+                  "label": "Extra Bold 800"
+                },
+                {
+                  "value": "800i",
+                  "label": "Extra Bold italic 800i"
+                },
+                {
+                  "value": "900",
+                  "label": "Black 900"
+                },
+                {
+                  "value": "900i",
+                  "label": "Black italic 900i"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "id": "second_font_type",
+              "label": "Tipo",
+              "default": "sans-serif",
+              "options": [
+                {
+                  "value": "sans-serif",
+                  "label": "Sans serif"
+                },
+                {
+                  "value": "serif",
+                  "label": "Serif"
+                },
+                {
+                  "value": "cursive",
+                  "label": "Cursive"
                 }
               ]
             }
