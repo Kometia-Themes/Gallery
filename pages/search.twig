@@ -2,8 +2,6 @@
 
 {% block body %}
 <div class="container-fluid search-section">
-
-
   <div class="row page-search">
     <div class="col-xs-12 section-horizontal">
       <div class="row header">
@@ -37,7 +35,7 @@
           </thead>
           <tbody></tbody>
           {% for product in results.products %}
-          <tr>
+          <tr class="js-clickable" data-href="/productos/{{ product.permalink }}{% if product.sku.permalink != 'default' %}/{{ product.sku.permalink }}{% endif %}">
             <td width="20%" class="hidden-xs">
               <a href="/productos/{{ product.permalink }}">
                 {% if product.image_url %}
@@ -64,4 +62,15 @@
   {% endif %}
 
 </div> <!-- .container-fluid -->
+{% endblock %}
+
+{% block body_js %}
+{{ parent() }}
+<script type="text/javascript">
+$(function () {
+    $('.table > tbody > tr.js-clickable').on('click', function(e) {
+      window.location = $(this).data('href');
+    });
+  });
+</script>  
 {% endblock %}
