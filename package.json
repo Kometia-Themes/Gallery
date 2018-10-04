@@ -1,0 +1,85 @@
+{
+  "name": "Gallery",
+  "version": "1.1.0",
+  "description": "Theme Halston Shoperti",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:carlosvazquez/gallery-theme.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently -d \"[{name}]\" -n \"HTTP,JS,SASS,LESS\" -c \"bgBlue.bold,bgMagenta.bold,bgPink.bold,bgGreen.bold\" \"npm run dev\" \"npm run serve\" \"livereload public/\"",
+    "dev": "webpack -p --config ./webpack.development.config.js --watch --progress --colors --display-error-details",
+    "build": "webpack -d --config ./webpack.prebuild.config.js && node findreplace.js && webpack -p --config ./webpack.production.config.js && node themebuilder.js",
+    "serve": "webpack-dev-server --progress --colors --config ./webpack.server.config.js ",
+    "test": "mocha --colors --require babel-core/register"
+  },
+  "keywords": [
+    "Kometia",
+    "template",
+    "theme"
+  ],
+  "author": "Kometia",
+  "license": "ISC",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 7.8.0",
+    "npm": ">= 4.4.4"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-airbnb": "^2.4.0",
+    "bootstrap": "4.1.1",
+    "chai": "^4.1.2",
+    "concurrently": "^3.4.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "del": "^2.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "extract-zip": "^1.6.0",
+    "file-loader": "^0.10.0",
+    "fs": "^0.0.1-security",
+    "fsevents": "^1.2.3",
+    "graceful-fs": "^4.1.11",
+    "html-webpack-plugin": "^2.28.0",
+    "jquery": "^1.12.4",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "livereload": "^0.6.2",
+    "minimatch": "^3.0.4",
+    "mocha": "^5.1.1",
+    "mocha-jsdom": "^1.1.0",
+    "node-sass": "^4.5.0",
+    "on-build-webpack": "^0.1.0",
+    "postcss-modules-local-by-default": "^1.1.1",
+    "purifycss-webpack": "^0.7.0",
+    "replace": "^0.3.0",
+    "sass-loader": "^6.0.2",
+    "script-loader": "^0.7.0",
+    "sinon": "^5.0.8",
+    "tar": "^2.2.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^3.12.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-livereload-plugin": "^0.10.0",
+    "webpack-replace": "^1.0.0",
+    "webpack-shell-plugin": "^0.5.0",
+    "webpack-string-replacer-plugin": "^1.0.0",
+    "webpack-uglify-js-plugin": "^1.1.9",
+    "zip-webpack-plugin": "^1.0.0"
+  },
+  "dependencies": {
+    "airbnb-browser-shims": "^2.1.0",
+    "currency-kometia": "^0.0.10"
+  }
+}

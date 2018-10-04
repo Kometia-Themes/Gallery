@@ -1,0 +1,34 @@
+$body_font: "{{ settings.body_font | remove('Google+') | replace({'+': ' '}) }}";
+$body_font_type: "{{ settings.body_font_type }}";
+$body_font_size: "{{ settings.body_font_size }}";
+$body_font_color: "{{ settings.body_font_color }}";
+$body_font_weight: "{{ settings.body_font_weight }}";
+
+$second_font: "{{ settings.second_font | remove('Google+') | replace({'+': ' '}) }}";
+$second_font_size: "{{ settings.second_font_size }}";
+$second_font_type: "{{ settings.second_font_type }}";
+$second_font_weight: "{{ settings.second_font_weight }}";
+
+$heading_font: "{{ settings.heading_font | remove('Google+') | replace({'+': ' '}) }}";
+$headings_color: "{{ settings.headings_color }}";
+$heading_font_size: "{{ settings.heading_font_size }}";
+$heading_font_type: "{{ settings.heading_font_type }}";
+$heading_font_weight: "{{ settings.heading_font_weight }}";
+
+$btn_bg_color: "{{ settings.btn_bg_color }}";
+$btn_text_color: "{{ settings.btn_text_color }}";
+$titles_bg_color: "{{ settings.titles_bg_color }}";
+$main_link_color: "{{ settings.main_link_color }}";
+$brand_main_color: "{{ settings.brand_main_color }}";
+$btn_bg_color_hover: "{{ settings.btn_bg_color_hover }}";
+$collection_bg_color: "{{ settings.collection_bg_color }}";
+$btn_text_color_hover: "{{ settings.btn_text_color_hover }}";
+$body_background_color: "{{ settings.body_background_color }}";
+$main_link_color_hover: "{{ settings.main_link_color_hover }}";
+$collection_bg_color_odd: "{{ settings.collection_bg_color_odd }}";
+$collection_bg_color_even: "{{ settings.collection_bg_color_even }}";
+$sidebar_menu_links_color: "{{ settings.sidebar_menu_links_color }}";
+$product_compared_price_color: "{{ settings.product_compared_price_color }}";
+$sidebar_menu_background_color: "{{ settings.sidebar_menu_background_color }}";
+$sidebar_menu_links_color_hover: "{{ settings.sidebar_menu_links_color_hover }}";
+

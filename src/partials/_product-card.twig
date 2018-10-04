@@ -6,7 +6,7 @@
   {% set style = 'img-placeholder' %}
 {% endif %}
 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 product__item">
-  <a href="/productos/{{ product.permalink }}" class="product__container image-container {{ settings.thumbnail_form }} {{ style }}" style="background-image: url({{ image_url }})">
+  <a href="/productos/{{ product.permalink }}{% if product.sku.permalink != 'default' %}/{{ product.sku.permalink }}{% endif %}" class="product__container image-container {{ settings.thumbnail_form }} {{ style }}" style="background-image: url({{ image_url }})">
     <img class="fake" src="{{ image_url }}">
     <div class="product__description">
       {% if product.compared_price > product.price %}
